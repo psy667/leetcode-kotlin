@@ -1,0 +1,15 @@
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.DynamicTest
+import org.junit.jupiter.api.TestFactory
+
+internal class __Test {
+    @TestFactory
+    fun __() = listOf(
+            intArrayOf(1,2,3) to intArrayOf(1,2,4),
+            intArrayOf(4,3,2,1) to intArrayOf(4,3,2,2),
+            intArrayOf(1,9,9) to intArrayOf(2,0,0),
+            intArrayOf(9,9) to intArrayOf(1,0,0),
+        ).map { (input, expected) -> DynamicTest.dynamicTest("__($input) to be $expected") {
+            Assertions.assertEquals(expected, __(input))
+        } }
+}
