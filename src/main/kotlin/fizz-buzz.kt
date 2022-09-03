@@ -6,20 +6,3 @@ fun fizzBuzz(n: Int) = (1..n).map {
         else -> it.toString()
     }
 }
-
-//    val result = mutableListOf<String>()
-//
-//    for (t in 1..n) {
-//        if((t % 15) == 0) {
-//            result.add("FizzBuzz")
-//        } else if((t % 3) == 0) {
-//            result.add("Fizz")
-//        } else if((t % 5) == 0) {
-//            result.add("Buzz")
-//        } else {
-//            result.add(t.toString())
-//        }
-//    }
-//
-//    return result;
-//}
