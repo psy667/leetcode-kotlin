@@ -4,7 +4,10 @@ open class ListNode(var `val`: Int) {
     var next: ListNode? = null
 
     companion object {
-        fun fromList(arr: List<Int>): ListNode {
+        fun fromList(arr: List<Int>): ListNode? {
+            if (arr.isEmpty()) {
+                return null
+            }
             var cur = ListNode(arr[0])
             val head: ListNode = cur
 
@@ -33,4 +36,12 @@ open class ListNode(var `val`: Int) {
 
         return arr.toList()
     }
+
+    override fun toString(): String {
+        return toList().joinToString(" ➝ ")
+    }
+}
+
+fun List<Int>.toLinkedList(): ListNode? {
+    return ListNode.fromList(this)
 }
