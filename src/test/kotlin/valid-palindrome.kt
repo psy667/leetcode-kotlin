@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.TestFactory
 
-internal class isPalindromeTest {
+internal class IsPalindromeTest {
     @TestFactory
     fun isPalindrome() = listOf(
             "A man, a plan, a canal: Panama" to true,
