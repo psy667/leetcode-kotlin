@@ -1,7 +1,4 @@
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
+import utils.TreeNode
 
 fun levelOrder(root: TreeNode?, acc: MutableList<MutableList<Int>> = mutableListOf(), level: Int = 0): List<List<Int>> {
     if(root == null) return acc
